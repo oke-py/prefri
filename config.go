@@ -17,7 +17,7 @@ func (c *Config) addFlags() {
 	flag.StringVar(&c.CertFile, "tls-cert-file", c.CertFile, ""+
 		"File containing the default x509 Certificate for HTTPS. (CA cert, if any, concatenated "+
 		"after server cert).")
-	flag.StringVar(&c.KeyFile, "tls-private-key-file", c.KeyFile, ""+
+	flag.StringVar(&c.KeyFile, "tls-key-file", c.KeyFile, ""+
 		"File containing the default x509 private key matching --tls-cert-file.")
 }
 

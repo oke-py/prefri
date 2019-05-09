@@ -69,8 +69,8 @@ spec:
           - containerPort: 443
         args:
         # - --tls-ca-file=/etc/certs/ca.pem
-         - -tls-cert-file=/etc/certs/webhook.pem
-         - -tls-private-key-file=/etc/certs/webhook-key.pem
+         - --tls-cert-file=/etc/certs/webhook.pem
+         - --tls-key-file=/etc/certs/webhook-key.pem
         volumeMounts:
         - name: certs
           mountPath: /etc/certs
