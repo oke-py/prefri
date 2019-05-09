@@ -16,15 +16,15 @@ import (
 func prefri(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
 	klog.V(2).Info("calling prefri")
 
-	if expect, actual := "deployments", ar.Request.Resource.Resource; expect != actual {
-		err := fmt.Errorf("unexpected resource: expect %s, actual %s", expect, actual)
-		klog.Error(err)
-		return toAdmissionResponse(true, nil)
-	}
+	// if expect, actual := "deployments", ar.Request.Resource.Resource; expect != actual {
+	// 	err := fmt.Errorf("unexpected resource: expect %s, actual %s", expect, actual)
+	// 	klog.Error(err)
+	// 	return toAdmissionResponse(true, nil)
+	// }
 
-	now := time.Now()
+	weekday := time.Now().Weekday()
 
-	if now.Weekday() == time.Friday {
+	if weekday == time.Thursday {
 		err := fmt.Errorf("Operation is prohibited")
 		return toAdmissionResponse(false, err)
 	}
