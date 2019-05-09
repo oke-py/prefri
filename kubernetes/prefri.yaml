@@ -61,7 +61,7 @@ spec:
       name: prefri
     spec:
       containers:
-      - image: okepy/prefri:v0.1.1
+      - image: okepy/prefri:v0.1.2
         name: prefri
         imagePullPolicy: Always
         command: ["/webhook"]

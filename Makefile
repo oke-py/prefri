@@ -1,5 +1,5 @@
 REVISION  := $(shell git rev-parse --short HEAD)
-VERSION := v0.1.1
+VERSION := v0.1.2
 
 .PHONY: build
 build: dep-ensure
