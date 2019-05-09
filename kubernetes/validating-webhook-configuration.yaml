@@ -12,6 +12,7 @@ webhooks:
           - v1
           - v1beta1
         operations:
+          - CREATE
           - UPDATE
         resources:
           - deployments
@@ -20,5 +21,5 @@ webhooks:
       service:
         namespace: default
         name: prefri
-        path: /deployments
+        path: /prefri
       caBundle: __CA__
