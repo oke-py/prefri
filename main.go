@@ -102,6 +102,9 @@ func servePrefri(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	klog.InitFlags(nil)
+	flag.Set("logtostderr", "true")
+
 	var config Config
 	config.addFlags()
 	flag.Parse()
