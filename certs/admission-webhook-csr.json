@@ -1,0 +1,23 @@
+{
+    "CN": "prefri.default.svc",
+    "hosts": [
+      "127.0.0.1",
+      "prefri",
+      "prefri.default",
+      "prefri.default",
+      "prefri.default.svc"
+    ],
+    "key": {
+      "algo": "rsa",
+      "size": 2048
+    },
+    "names": [
+      {
+        "C": "JP",
+        "L": "Japan",
+        "O": "oke-py.com",
+        "OU": "Admission Webhook",
+        "ST": "Japan"
+      }
+    ]
+  }

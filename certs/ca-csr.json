@@ -1,0 +1,16 @@
+{
+    "CN": "oke-py",
+    "key": {
+      "algo": "rsa",
+      "size": 2048
+    },
+    "names": [
+      {
+        "C": "JP",
+        "L": "Japan",
+        "O": "oke-py",
+        "OU": "CA",
+        "ST": "Japan"
+      }
+    ]
+  }
