@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"time"
 
 	"k8s.io/api/admission/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -19,6 +20,13 @@ func prefri(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
 		err := fmt.Errorf("unexpected resource: expect %s, actual %s", expect, actual)
 		klog.Error(err)
 		return toAdmissionResponse(true, nil)
+	}
+
+	now := time.Now()
+
+	if now.Weekday() == time.Friday {
+		err := fmt.Errorf("Operation is prohibited")
+		return toAdmissionResponse(false, err)
 	}
 
 	return toAdmissionResponse(true, nil)
