@@ -24,7 +24,7 @@ func prefri(ar v1beta1.AdmissionReview) *v1beta1.AdmissionResponse {
 
 	weekday := time.Now().Weekday()
 
-	if weekday == time.Thursday {
+	if weekday == time.Friday {
 		err := fmt.Errorf("Operation is prohibited")
 		return toAdmissionResponse(false, err)
 	}
